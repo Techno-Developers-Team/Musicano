@@ -53,7 +53,10 @@ let now_playing = document.querySelector(".now-playing");
       track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
       track_name.textContent = track_list[track_index].name;
       track_artist.textContent = track_list[track_index].artist;
-      now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+      
+      // now_playing is defined but class .now-playing is not exist so I commented next line
+      
+      // now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
       // Set an interval of 1000 milliseconds for updating the seek slider
       updateTimer = setInterval(seekUpdate, 1000);
@@ -62,7 +65,8 @@ let now_playing = document.querySelector(".now-playing");
       curr_track.addEventListener("ended", nextTrack);
 
       // Apply a random background color
-      random_bg_color();
+      // Random_bg_color is not defined so I commented out for now
+      // random_bg_color();
     }
 
     
@@ -92,7 +96,7 @@ let now_playing = document.querySelector(".now-playing");
       isPlaying = false;
 
       // Replace icon with the play icon
-      playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';;
+      playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
     }
 
     function nextTrack() {
@@ -106,7 +110,7 @@ let now_playing = document.querySelector(".now-playing");
     function prevTrack() {
       if (track_index > 0)
         track_index -= 1;
-      else track_index = track_list.length;
+      else track_index = track_list.length - 1;
       loadTrack(track_index);
       playTrack();
     }
