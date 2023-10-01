@@ -123,7 +123,9 @@ i.fa-volume-up {
 .playpause-track {
   padding: 4%;
 }
-
+.playpause-track i{
+  color:#fff;
+}
 /* Change the opacity when mouse is hovered */
 .playpause-track:hover,
 .prev-track:hover,
