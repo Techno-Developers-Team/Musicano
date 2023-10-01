@@ -62,22 +62,18 @@ Check out the [Musicano Demo](https://your-musicano-demo-link.com) to see the mu
 #### CELEBRATING 10TH YEAR OF OPEN SOURCE!
 # Contribute to open source and Earn Digital Rewards 🚀
 #### Star & fork this Repo first 
-![Hacktoberfest 2023](https://github.com/Jayesh-JainX/Hacktoberfest-23/assets/103871719/63bc748c-65a6-4188-8910-55748ad46f56)
 
 Use this project to make your contributions to open source during HacktoberFest 2023. Practice making your pull requests to public repositories before doing the real thing! 
 This repository is open to all members of the GitHub community. Any member may contribute to this project without being a collaborator.
 
-![](https://komarev.com/ghpvc/?username=hacktoberfest-23&base=50)
 
 ## To participate, visit: https://hacktoberfest.com/participation/
 ## What is Hacktoberfest?
 Hacktoberfest is an annual event that runs throughout October, sponsored by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest), to encourage contributions to open source projects.
 [Hacktoberfest Official Website](https://hacktoberfest.com/)
-## Contributors Website: https://jayesh-jainx.github.io/Hacktoberfest-23/
-# How to contribute to this project
+
 ### Video tutorials:
 - [Hacktoberfest Official Website](https://hacktoberfest.com/)
-
 - [How to Do Your First Pull Request](https://hacktoberfest.com/participation/#beginner-resources)
 - [Video Tutorial](https://www.youtube.com/)
 
