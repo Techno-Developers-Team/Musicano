@@ -16,14 +16,23 @@ body {
 }
 h1 {
   color: #fff;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Satisfy', 'cursive';
 
+}
+
+.page_heading{
+  padding: 1rem 0;
+  font-size: 3rem;
 }
 #musictitle {
   color: #fff;
   font-family: 'Alexandria', sans-serif;
   font-size: 40px;
   /* font-size: 400%; */
+}
+
+.artist_div{
+  margin-bottom: 1rem;
 }
 
 #artist {
@@ -110,7 +119,9 @@ i.fa-volume-up {
   display: block;
   margin-left: 2%;
 }
-
+.buttons button{
+  display: inline-flex;
+}
 
 .playpause-track,
 .prev-track,
@@ -139,15 +150,40 @@ i.fa-volume-up {
 }
 
 .track-name {
-  font-size: 3.2rem;
+  font-size: 2rem;
   text-align: justify;
 }
 
 .track-artist {
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 
-@media screen and (max-width:1040px) {
+
+/* Medium devices (lobile 600px) */
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 95%;
+  }
+  .songimg img {
+    width: 150px;
+  }
+  .track-name {
+    font-size: 1.8rem;
+  }
+  .track-artist {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1040px) {
   .card {
     width: 50%;
   }
@@ -156,17 +192,6 @@ i.fa-volume-up {
     font-size: 1.8rem;
   }
 
-
-  .track-artist {
-    font-size: 1rem;
-    text-align: justify;
-  }
-}
-
-@media screen and (max-width:640px) {
-  .track-name {
-    font-size: 1.8rem;
-  }
   .track-artist {
     font-size: 1rem;
     text-align: justify;
@@ -176,14 +201,9 @@ i.fa-volume-up {
   }
 }
 
-@media screen and (max-width:500px) {
-  .songimg img {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width:420px) {
-  .songimg img {
-    width: 150px;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 50%;
   }
 }

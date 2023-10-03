@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musicano</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,10 +33,23 @@
       </span>
       <br />
       <br />
+    <div class="page_header">
+      <h1 class="page_heading">Musicano</h1>
+    </div>
+    <div class="card" id="card">
+      <div class="music_title_div">
+        <span id="musictitle" class="track-name"> Excuses </span>
+      </div>
+      <div class="artist_div">
+        <span id="artist" class="track-artist">
+          Ap Dhillon, Intense, Gurinder Gill
+        </span>
+      </div>
       <span class="songimg track-art">
         <img/>
       </span>
       <span class="buttons">
+      <div class="buttons">
         <button onclick="prevTrack()" class="prev-track playpause_btn">
           <span class="material-symbols-outlined" style="color: white">
             skip_previous
@@ -51,7 +65,7 @@
             skip_next
           </span>
         </button>
-      </span>
+      </div>
       <div class="slider_container">
         <div class="current-time">00:00</div>
         <input
