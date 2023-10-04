@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
   background-image: url("low-poly-grid-haikei\ \(1\).svg");
   background-repeat: no-repeat;
   background-size: cover;
-   width: 100vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -16,26 +16,25 @@ body {
 }
 h1 {
   color: #fff;
-  font-family: 'Satisfy', cursive;
-
+  font-family: "Satisfy", cursive;
 }
 #musictitle {
   color: #fff;
-  font-family: 'Alexandria', sans-serif;
+  font-family: "Alexandria", sans-serif;
   font-size: 40px;
   /* font-size: 400%; */
 }
 
 #artist {
   color: #fff;
-  font-family: 'Alexandria', sans-serif;
+  font-family: "Alexandria", sans-serif;
   font-size: 20px;
 }
-.songimg img{
+.songimg img {
   height: 220px;
-  width:250px;
+  width: 250px;
   background-image: url(/Musicano/images/shippingLanes_chadCrouch.jpeg);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .card {
@@ -44,8 +43,8 @@ h1 {
   background-color: rgba(255, 140, 238, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
-  height:100%;
-  width:350px;
+  height: 100%;
+  width: 350px;
 }
 
 .slider_container {
@@ -65,8 +64,8 @@ h1 {
   height: 5px;
   background: black;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 /* Modify the appearance of the slider thumb */
@@ -85,7 +84,7 @@ h1 {
 /* Change the opacity when mouse is hovered */
 .seek_slider:hover,
 .volume_slider:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .seek_slider {
@@ -111,7 +110,6 @@ i.fa-volume-up {
   margin-left: 2%;
 }
 
-
 .playpause-track,
 .prev-track,
 .next-track {
@@ -122,20 +120,20 @@ i.fa-volume-up {
   height: 10%;
   background-color: black;
   /* Smoothly transition the opacity */
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .playpause-track {
   padding: 4%;
 }
-.playpause-track i{
-  color:#fff;
+.playpause-track i {
+  color: #fff;
 }
 /* Change the opacity when mouse is hovered */
 .playpause-track:hover,
 .prev-track:hover,
 .next-track:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .track-name {
@@ -147,7 +145,105 @@ i.fa-volume-up {
   font-size: 1.7rem;
 }
 
-@media screen and (max-width:1040px) {
+.menu-container {
+  width: 65px;
+  float: left;
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+  font-family: "Alexandria", sans-serif;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menu-container ul {
+  box-shadow: 5px 0 5px -5px #333;
+  display: block;
+  width: 65vw;
+  bottom: 0;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 140, 238, 0.75);
+  position: fixed;
+  transform: translateX(-405px);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  top: 0;
+  z-index: 2;
+  list-style-type: none;
+  padding: 0;
+  max-width: 250px;
+}
+
+.menu-container ul li {
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+  width: 100%;
+  float: left;
+}
+
+.menu-container ul li:hover {
+  background: #000;
+}
+
+.menu-container ul li a {
+  display: block;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.menu-container .menu-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  display: block;
+}
+.menu-container .menu-button i {
+  height: 45px;
+  width: 65px;
+  padding: 9px;
+}
+.menu-container .menu-button:after {
+  opacity: 0;
+  top: 0;
+  content: "";
+  width: 100vw;
+  display: block;
+  position: fixed;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0, 0, 0.3, 1);
+  transition-delay: 0.1s;
+}
+#menu-toggle {
+  display: none;
+}
+#menu-toggle.active ~ .menu-button:after,
+#menu-toggle:checked ~ .menu-button:after {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+#menu-toggle.active ~ ul,
+#menu-toggle:checked ~ ul {
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+@media screen and (max-width: 1040px) {
   .card {
     width: 50%;
   }
@@ -156,14 +252,13 @@ i.fa-volume-up {
     font-size: 1.8rem;
   }
 
-
   .track-artist {
     font-size: 1rem;
     text-align: justify;
   }
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .track-name {
     font-size: 1.8rem;
   }
@@ -171,18 +266,18 @@ i.fa-volume-up {
     font-size: 1rem;
     text-align: justify;
   }
-  .card{
+  .card {
     width: 400px;
   }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .songimg img {
     width: 200px;
   }
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width: 420px) {
   .songimg img {
     width: 150px;
   }
