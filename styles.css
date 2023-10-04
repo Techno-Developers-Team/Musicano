@@ -1,62 +1,51 @@
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   background-image: url("low-poly-grid-haikei\ \(1\).svg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-
 h1 {
   color: #fff;
-  font-family: 'Satisfy', 'cursive';
+  font-family: 'Satisfy', cursive;
 
 }
-
-.page_heading{
-  padding: 1rem 0;
-  font-size: 3rem;
-}
-
 #musictitle {
   color: #fff;
   font-family: 'Alexandria', sans-serif;
+  font-size: 40px;
   /* font-size: 400%; */
-}
-
-.artist_div{
-  margin-bottom: 1rem;
 }
 
 #artist {
   color: #fff;
   font-family: 'Alexandria', sans-serif;
+  font-size: 20px;
 }
-
-.songimg {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+.songimg img{
+  height: 220px;
+  width:250px;
+  background-image: url(/Musicano/images/shippingLanes_chadCrouch.jpeg);
+  background-size:cover;
+  background-repeat: no-repeat;
 }
-
 .card {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 140, 238, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
-  width: 50%;
-  text-align: center; 
-  margin: auto;
+  height:100%;
+  width:350px;
 }
 
 .slider_container {
@@ -121,9 +110,7 @@ i.fa-volume-up {
   display: block;
   margin-left: 2%;
 }
-.buttons button{
-  display: inline-flex;
-}
+
 
 .playpause-track,
 .prev-track,
@@ -152,57 +139,51 @@ i.fa-volume-up {
 }
 
 .track-name {
-  font-size: 2rem;
+  font-size: 3.2rem;
   text-align: justify;
 }
 
 .track-artist {
-  font-size: 1rem;
+  font-size: 1.7rem;
 }
 
-
-/* Medium devices (lobile 600px) */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width:1040px) {
   .card {
-    width: 95%;
+    width: 50%;
   }
+
+  .track-name {
+    font-size: 1.8rem;
+  }
+
+
+  .track-artist {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .track-name {
+    font-size: 1.8rem;
+  }
+  .track-artist {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .card{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .songimg img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width:420px) {
   .songimg img {
     width: 150px;
-  }
-  .track-name {
-    font-size: 1.8rem;
-  }
-  .track-artist {
-    font-size: 1rem;
-    text-align: justify;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-  .card {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1040px) {
-  .card {
-    width: 50%;
-  }
-
-  .track-name {
-    font-size: 1.8rem;
-  }
-
-  .track-artist {
-    font-size: 1rem;
-    text-align: justify;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .card {
-    width: 50%;
   }
 }
