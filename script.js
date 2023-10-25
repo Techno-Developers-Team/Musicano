@@ -69,7 +69,9 @@ let now_playing = document.querySelector(".now-playing");
       // random_bg_color();
     }
 
-    
+    volume_slider.addEventListener("input", function() {
+      setVolume();
+    });
 
     // Reset Values
     function resetValues() {
