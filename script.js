@@ -150,6 +150,25 @@ let now_playing = document.querySelector(".now-playing");
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
       }
     }
+    // Select the mute/unmute button by its ID
+let muteButton = document.getElementById("muteButton");
+
+// Function to toggle mute/unmute
+function toggleMute() {
+  if (curr_track.volume === 0) {
+    // Unmute the audio
+    curr_track.volume = volume_slider.value / 100;
+    muteButton.innerHTML = '<i class="fa fa-volume-up"></i>';
+  } else {
+    // Mute the audio
+    curr_track.volume = 0;
+    muteButton.innerHTML = '<i class="fa fa-volume-off"></i>';
+  }
+}
+
+// Add a click event listener to the mute/unmute button
+muteButton.addEventListener("click", toggleMute);
+
 
     // Load the first track in the tracklist
     loadTrack(track_index);

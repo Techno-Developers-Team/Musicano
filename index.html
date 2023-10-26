@@ -80,7 +80,9 @@
         <div class="total-duration">00:00</div>
       </div>
       <div class="slider_container">
-        <i class="fa fa-volume-down"></i>
+        <button id="muteButton" class="mute-button">
+          <i class="fa fa-volume-up"></i>
+        </button>
         <input
           type="range"
           min="1"
@@ -90,7 +92,9 @@
           onchange="setVolume()"
         />
         <i class="fa fa-volume-up"></i>
+        
       </div>
+      
     </div>
     <script src="script.js"></script>
   </body>
