@@ -24,19 +24,19 @@ let now_playing = document.querySelector(".now-playing");
       {
         name: "Night Owl",
         artist: "Broke For Free",
-        image: "/Musicano/images/nightOwl_brokeForFree.jpeg",
+        image: "./images/nightOwl_brokeForFree.jpeg",
         path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
       },
       {
         name: "Enthusiast",
         artist: "Tours",
-        image: "/Musicano/images/Enthusiast_Tours.jpeg",
+        image: "./images/Enthusiast_Tours.jpeg",
         path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
       },
       {
         name: "Shipping Lanes",
         artist: "Chad Crouch",
-        image: "/Musicano/images/shippingLanes_chadCrouch.jpeg",
+        image: "./images/shippingLanes_chadCrouch.jpeg",
         path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
       },
     ];
@@ -53,9 +53,9 @@ let now_playing = document.querySelector(".now-playing");
       track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
       track_name.textContent = track_list[track_index].name;
       track_artist.textContent = track_list[track_index].artist;
-      
+
       // now_playing is defined but class .now-playing is not exist so I commented next line
-      
+
       // now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
       // Set an interval of 1000 milliseconds for updating the seek slider
